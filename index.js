@@ -46,6 +46,7 @@ const io = socket(server, {
   cors: {
     origin: "https://jags-chat-application.netlify.app",
     credentials: true,
+    methods: ["GET", "POST"]
   },
 });
 
