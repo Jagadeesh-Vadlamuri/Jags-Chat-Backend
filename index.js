@@ -12,9 +12,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 // let PORT = process.env.PORT || 5000;
-let URI = "mongodb+srv://Jagadeesh-Vadlamuri:GC8ccsnEL8YBRxjr@cluster0.7ikzs0i.mongodb.net/chatApp?retryWrites=true&w=majority";
+
 mongoose
-  .connect(URI, {
+  .connect(process.env.URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
